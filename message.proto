@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto_pet;
+
+option go_package = ".";
+
+service MessageService {
+  rpc SendMessage(TextMessage) returns (TextResponse);
+}
+
+message TextMessage {
+  string text = 1;
+}
+
+message TextResponse {
+  string message = 1;
+}
